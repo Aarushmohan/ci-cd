@@ -3,7 +3,7 @@ pipeline {
 	
 	  tools
     {
-       maven "default"
+       maven "Default"
     }
  stages {
       stage('checkout') {
