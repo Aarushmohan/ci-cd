@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.test</groupId>
-  <artifactId>HelloWorldMaven</artifactId>
+  <artifactId>Database</artifactId>
   <version>0.0.2-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>HelloWorldMaven</name>
+  <name>Database</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -65,7 +65,7 @@
   
 <distributionManagement>
 	<repository>
-		<id>nexus</id>
+		<id>nexus3</id>
 		<name>database</name>
 		<url>http://10.12.124.82:8081/repository/database/</url>
 	</repository>
