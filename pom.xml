@@ -39,10 +39,12 @@
         <netbeans.hint.deploy.server>gfv3ee6</netbeans.hint.deploy.server>
         <webapp.databaseTempDir>/tmp</webapp.databaseTempDir>
        <distributionManagement>
+	       </properties>
+	       
 	<repository>
 		<id>nexus</id>
-		<name>cargo-release</name>
-		<url>http://10.12.124.82:8081/repository/cargo-release/</url>
+		<name>database</name>
+		<url>http://10.12.124.82:8081/repository/database/</url>
 	</repository>
  
 	
@@ -59,8 +61,7 @@
   </dependencies>
     
 
-  </properties>
-
+  
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-war-plugin</artifactId>
