@@ -2,7 +2,7 @@ node {
   
       stage('checkout') {
            
-                git credentialsId: '9438d8c0-e9ed-4c1f-8a1a-389c9932918c', url: 'https://github.com/Aarushmohan/ci-cd.git'
+                git credentialsId: 'github', url: 'https://github.com/Aarushmohan/ci-cd.git'
              
           
         }
