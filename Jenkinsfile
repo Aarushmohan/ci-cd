@@ -15,8 +15,8 @@ node {
         }
      stage('push the artifacts to nexus')
 	{
-		            nexusVersion:"nexus3" ,
-                            protocol:"http" ,
+		            nexusVersion:"nexus3" 
+                            protocol:"http" 
                             nexusUrl: "10.12.124.82:8081",
                             groupId: pom.groupId,
                             version: pom.version,
