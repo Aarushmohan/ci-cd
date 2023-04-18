@@ -17,11 +17,11 @@ node {
 	{
 		            nexusVersion:"nexus3" 
                             protocol:"http" 
-                            nexusUrl: "10.12.124.82:8081",
-                            groupId: pom.groupId,
-                            version: pom.version,
-                            repository:database ,
-                            credentialsId:nexus ,
+                            nexusUrl: "10.12.124.82:8081"
+                            groupId: pom.groupId
+                            version: pom.version
+                            repository:database 
+                            credentialsId:nexus 
                             artifacts: [
                                 [artifactId: pom.artifactId,
                                 classifier: '',
