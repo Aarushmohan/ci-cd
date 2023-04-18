@@ -3,17 +3,11 @@ node {
       stage('checkout') {
            steps {
              
-                git branch: 'master', url: 'https://github.com/Aarushmohan/ci-cd.git'
+                git credentialsId: '9438d8c0-e9ed-4c1f-8a1a-389c9932918c', url: 'https://github.com/Aarushmohan/ci-cd.git'
              
           }
         }
-	 stage('Execute Maven') {
-           steps {
-             
-                sh 'mvn package'             
-          }
-        }
-        
+	
 
   stage('Docker Build and Tag') {
            steps {
