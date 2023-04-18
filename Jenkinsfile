@@ -1,11 +1,5 @@
-pipeline {
-    agent any
-	
-	  tools
-    {
-       maven "Default"
-    }
- stages {
+node {
+  
       stage('checkout') {
            steps {
              
