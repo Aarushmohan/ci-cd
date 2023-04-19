@@ -70,7 +70,12 @@
 		<url>http://10.12.124.82:8081/repository/database/</url>
 	</repository>
  
-	
+      <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.5</version>
+            <scope>provided</scope>
+        </dependency>
 
 </distributionManagement>
 
