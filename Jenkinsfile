@@ -31,11 +31,46 @@ node {
                             ]
 			);
 
-	}
+	}      stage('Run Docker container on Jenkins Agent') {
+             
+            steps 
+			{
+                sh "docker run -d -p 8003:8080 nikhilnidhi/samplewebapp"
+ 
+            }
+        }
+ stage('Run Docker container on remote hosts') {
+             
+            steps {
+                sh "docker -H ssh://jenkins@10.12.124.82 run -d -p 8003:8080 nikhilnidhi/samplewebapp"
+ 
+            }
+        }
+    }
+
+	/*
 	stage('deploy to tomcat')
 	{
 		deploy adapters: [tomcat7(credentialsId: 'tomcat', path: '', url:'https://10.12.124.82:9090/')], contextPath: 'Login', war: 'target/LoginWebApp-1.war' 
     }
+    */
+	      stage('Run Docker container on Jenkins Agent') {
+             
+            steps 
+			{
+                sh "docker run -d -p 8003:8080 nikhilnidhi/samplewebapp"
+ 
+            }
+        }
+ stage('Run Docker container on remote hosts') {
+             
+            steps {
+                sh "docker -H ssh://jenkins@172.31.28.25 run -d -p 8003:8080 nikhilnidhi/samplewebapp"
+ 
+            }
+        }
+    }
+
 }
 				
 	
