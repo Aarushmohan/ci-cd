@@ -38,11 +38,11 @@ node {
                 sh "docker run -d -p 8003:8080 nikhilnidhi/samplewebapp"
  
             }
-    
+   /* 
  stage('Run Docker container on remote hosts') {
              
             
                 sh "docker -H ssh://jenkins@10.12.124.82 run -d -p 8003:8080 nikhilnidhi/samplewebapp"
  
- }
+ }*/
 }	
