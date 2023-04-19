@@ -24,9 +24,9 @@ node {
                             repository:'database',
                             credentialsId:'nexus' ,
                             artifacts: [
-                                [artifactId: pom.artifactId,
+                                [artifactId:'Database' ,
                                 classifier: '',
-                                file: artifactPath,
+                                file: 'target/LoginWebApp-1.war',
                                 type: pom.packaging]
                             ]
 			);
