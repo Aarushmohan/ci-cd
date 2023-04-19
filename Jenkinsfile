@@ -32,15 +32,8 @@ node {
 			);
 
 	}
-      stage('Run Docker container on Jenkins Agent') {
-
-                sh "docker run -d -p 8004:8080 nikhilnidhi/samplewebapp"           
-        }
- stage('Run Docker container on remote hosts') {
-             
-                sh "docker -H https://10.12.124.82 run -d -p 8004:8080 nikhilnidhi/samplewebapp"
- 
-            
-        }
+	stage('deploy to tomcat')
+	{
+		deploy adapters: [tomcat7(credentialsId: 'tomcat' path: '' url:'https://10.12.124.82:9090/)], contextPath: null , war: 'target/LoginWebApp-1.war' 
     }
 	
