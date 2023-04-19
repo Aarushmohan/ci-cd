@@ -15,23 +15,21 @@ node {
         }
      stage('push the artifacts to nexus')
 	{
+		nexusArtifactUploader(
 		            nexusVersion:"nexus3" 
                             protocol:"http" 
                             nexusUrl: "10.12.124.82:8081"
-                            groupId: pom.groupId
-                            version: pom.version
-                            repository:database 
-                            credentialsId:nexus 
+                            groupId: 'com.test'
+                            version: '0.0.2 SNAPSHOT'
+                            repository:'database'
+                            credentialsId:'nexus' 
                             artifacts: [
                                 [artifactId: pom.artifactId,
                                 classifier: '',
                                 file: artifactPath,
-                                type: pom.packaging],
-                                [artifactId: pom.artifactId,
-                                classifier: '',
-                                file: "pom.xml",
-                                type: "pom"]
+                                type: pom.packaging]
                             ]
+			);
 
 	}
       stage('Run Docker container on Jenkins Agent') {
