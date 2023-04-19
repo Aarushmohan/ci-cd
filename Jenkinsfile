@@ -16,13 +16,13 @@ node {
      stage('push the artifacts to nexus')
 	{
 		nexusArtifactUploader(
-		            nexusVersion:"nexus3" 
-                            nexusprotocol:"http" 
-                            nexusUrl: "10.12.124.82:8081"
-                            groupId: 'com.test'
-                            version: '0.0.2 SNAPSHOT'
-                            repository:'database'
-                            credentialsId:'nexus' 
+		            nexusVersion:"nexus3", 
+                            protocol:"http", 
+                            nexusUrl: "10.12.124.82:8081",
+                            groupId: 'com.test',
+                            version: '0.0.2 SNAPSHOT',
+                            repository:'database',
+                            credentialsId:'nexus' ,
                             artifacts: [
                                 [artifactId: pom.artifactId,
                                 classifier: '',
