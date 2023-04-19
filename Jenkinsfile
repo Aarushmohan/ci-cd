@@ -34,7 +34,7 @@ node {
 	}
 	stage('deploy to tomcat')
 	{
-		deploy adapters [tomcat7(credentialsId: 'tomcat', path: '', url:'https://10.12.124.82:9090/')], contextPath: 'db', war: 'target/*.war' 
+		deploy adapters: [tomcat7(credentialsId: 'tomcat', path: '', url:'https://10.12.124.82:9090/')], contextPath: 'db', war: 'target/*.war' 
     }
 }
 				
