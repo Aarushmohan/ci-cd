@@ -46,14 +46,9 @@ node {
  
             }
         }
-    }
+    
 
-	/*
-	stage('deploy to tomcat')
-	{
-		deploy adapters: [tomcat7(credentialsId: 'tomcat', path: '', url:'https://10.12.124.82:9090/')], contextPath: 'Login', war: 'target/LoginWebApp-1.war' 
-    }
-    */
+	
 	      stage('Run Docker container on Jenkins Agent') {
              
             steps 
