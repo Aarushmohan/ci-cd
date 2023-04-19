@@ -20,7 +20,7 @@ node {
                             protocol:"http", 
                             nexusUrl: "10.12.124.82:8081",
                             groupId: 'com.test',
-                            version: '0.0.2 SNAPSHOT',
+                            version: '0.0.2-SNAPSHOT',
                             repository:'database',
                             credentialsId:'nexus' ,
                             artifacts: [
