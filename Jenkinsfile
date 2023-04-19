@@ -17,7 +17,7 @@ node {
 	{
 		nexusArtifactUploader(
 		            nexusVersion:"nexus3" 
-                            protocol:"http" 
+                            nexusprotocol:"http" 
                             nexusUrl: "10.12.124.82:8081"
                             groupId: 'com.test'
                             version: '0.0.2 SNAPSHOT'
