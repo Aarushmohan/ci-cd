@@ -27,7 +27,7 @@ node {
                                 [artifactId:'Database' ,
                                 classifier: '',
                                 file: 'target/LoginWebApp-1.war',
-                                type: pom.packaging]
+                                type: 'war']
                             ]
 			);
 
