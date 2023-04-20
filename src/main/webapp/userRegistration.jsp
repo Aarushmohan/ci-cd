@@ -18,26 +18,4 @@
         response.sendRedirect("index.jsp");
     }
 %>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Create Your XSLT Here</title>
-    </head>
-    <body>
-        <%@include file="index.html"%>
-        <p>
-            helloworld
-        </p>
-        <form action="../AdminServlet">
-            URL <input type="text" name="txtUrl" value="" /><br/>
-            Start Promotion <input type="text" name="txtStart" value="" /><br/>
-            Produt Name <input type="text" name="txtProductName" value="" /><br/>
-            <input type="submit" value="View" name="action" />
-        </form>
-        <c:if test="${not empty requestScope.website}">
-            <div>
-                ${requestScope.website}
-            </div>
-        </c:if>
-    </body>
-</html>
+
