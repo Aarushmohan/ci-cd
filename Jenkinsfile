@@ -1,7 +1,17 @@
 node {
+	tools{
+		maven "Maven"
+	}
 	
       stage('checkout') {
                 git credentialsId: 'github', url: 'https://github.com/Aarushmohan/ci-cd.git'
+        }
+	
+	 stage('Execute Maven') {
+          
+             
+                sh 'mvn package'             
+          
         }
 	
      stage('Docker Build and Tag') {
