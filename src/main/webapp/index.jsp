@@ -5,7 +5,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Example</title>
     </head>
-    <body bgcolor="silver">
+    <body bgcolor="blue">
         <rs-slide style="position: absolute;" data-key="rs-119" data-title="Slider1" data-thumb="//karnatakatourism.org/wp-content/uploads/2022/08/Discover-Serenity-DOT-BANNER-1920_850-1-100x50.jpg" data-anim="ms:600;" data-in="o:0;" data-out="a:false;">
 							<img src="//karnatakatourism.org/wp-content/uploads/2022/08/Discover-Serenity-DOT-BANNER-1920_850-1.jpg" alt="" title="Discover-Serenity-DOT-BANNER-1920_850-1.jpg" width="1920" height="850" class="rev-slidebg tp-rs-img" data-panzoom="d:7000;ss:110;se:100;" data-no-retina>
 <!--
