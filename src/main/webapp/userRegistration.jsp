@@ -24,6 +24,7 @@
         <title>Create Your XSLT Here</title>
     </head>
     <body>
+        <%@include file="index.html"%>
         <p>
             helloworld
         </p>
