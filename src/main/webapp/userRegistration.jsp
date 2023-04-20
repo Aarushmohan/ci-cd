@@ -24,6 +24,9 @@
         <title>Create Your XSLT Here</title>
     </head>
     <body>
+        <p>
+            helloworld
+        </p>
         <form action="../AdminServlet">
             URL <input type="text" name="txtUrl" value="" /><br/>
             Start Promotion <input type="text" name="txtStart" value="" /><br/>
