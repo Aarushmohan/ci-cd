@@ -6,13 +6,20 @@ node {
         }
      stage('Docker Build and Tag') {
                 dockerImage = docker.build("mohanaarush/samplewebapp:latest")
+	     dockerImage.tag()
         }
      
   stage('Publish image to Docker Hub') {
         withDockerRegistry([ credentialsId: "dockerhub", url: "" ]) {
-          dockerImage.push()
+          dockerImage.push($BUILD_NUMBER)
+          dockerImage.push(latest)
+
           }
         }
+	stage('Remove Unused docker image') {
+sh "docker rmi $mohanaarush/samplewebapp:$BUILD_NUMBER"
+sh "docker rmi $mohanaarush/samplewebapp:latest"
+}
      stage('push the artifacts to nexus')
 	{
 		nexusArtifactUploader(
