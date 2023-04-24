@@ -5,7 +5,7 @@ node {
                 git credentialsId: 'github', url: 'https://github.com/Aarushmohan/ci-cd.git'
         }
      stage('Docker Build and Tag') {
-                dockerImage = docker.build("mohanaarush/samplewebapp:latest")
+                dockerImage = docker.build mohanaarush/samplewebapp:latest
 	     dockerImage.tag()
         }
      
