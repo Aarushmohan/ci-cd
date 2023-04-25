@@ -16,10 +16,12 @@ node {
 
           }
         }
+	/*
 	stage('Remove Unused docker image') {
 	sh "docker rmi $dockerImage:$BUILD_NUMBER"
 	sh "docker rmi $mohanaarush/samplewebapp:latest"
 		}
+		*/
      stage('push the artifacts to nexus')
 	{
 		nexusArtifactUploader(
