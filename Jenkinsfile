@@ -24,6 +24,7 @@ node {
 		*/
      stage('push the artifacts to nexus')
 	{
+		steps{
 		nexusArtifactUploader(
 		            nexusVersion:"nexus3", 
                             protocol:"http", 
@@ -39,7 +40,8 @@ node {
                                 type: 'war']
                             ]
 			);
-	}      
+		}      
+	}
        
    	
 	      stage('Run Docker container on Jenkins Agent') {
